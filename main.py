@@ -1,5 +1,5 @@
 import pygame
-#
+
 background_colour = (255,255,255) # For the background color of your window
 (width, height) = (300, 200) # Dimension of the window
 
