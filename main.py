@@ -1,17 +1,30 @@
 import pygame
-###
-background_colour = (255,255,255) # For the background color of your window
-(width, height) = (300, 200) # Dimension of the window
 
-screen = pygame.display.set_mode((width, height)) # Making of the screen
-pygame.display.set_caption('Tutorial 1') # Name for the window
-screen.fill(background_colour) #This syntax fills the background colour
+# Define some colors
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
 
-pygame.display.flip()
+pygame.init()
 
-running = True
-while running:
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      running = False
-      pygame.quit()
+
+size = (900, 700)
+screen = pygame.display.set_mode(size)
+
+pygame.display.set_caption("[ HnS Game ]")
+
+done = False
+
+clock = pygame.time.Clock()
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+    screen.fill(BLACK)
+    pygame.display.flip()
+    clock.tick(60)
+
+
+pygame.quit()
