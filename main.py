@@ -107,8 +107,8 @@ while running:
         player.move(0, 2)
 
     # Just added this to make it slightly fun ;)
-    # if player.rect.colliderect(end_rect):
-    #     raise SystemExit, "You win!"
+    if player.rect.colliderect(end_rect):
+        running = False
 
     # Draw the scene
     screen.fill((0, 0, 0))
